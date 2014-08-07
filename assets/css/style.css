@@ -1,0 +1,139 @@
+body {
+  background: #252525; }
+
+#main {
+  background: white; }
+
+nav ul {
+  float: right; }
+nav li {
+  float: left; }
+  nav li a {
+    display: block;
+    margin: 8px 0px 8px 26px;
+    padding: 0;
+    overflow: hidden;
+    height: 23px;
+    background-image: url("/assets/images/navigation.png");
+    background-color: transparent;
+    -webkit-transition: background 0.4s ease;
+    -moz-transition: background 0.4s ease;
+    -o-transition: background 0.4s ease;
+    transition: background 0.4s ease; }
+
+#research-nav {
+  background-position: 0 0;
+  width: 115px; }
+  #research-nav:hover {
+    background-position: 0 100%; }
+
+#people-nav {
+  background-position: -155px 0;
+  width: 85px; }
+  #people-nav:hover {
+    background-position: -155px 100%; }
+
+#publications-nav {
+  background-position: -280px 0;
+  width: 157px; }
+  #publications-nav:hover {
+    background-position: -280px 100%; }
+
+#downloads-nav {
+  background-position: -478px 0;
+  width: 137px; }
+  #downloads-nav:hover {
+    background-position: -478px 100%; }
+
+#contact-nav {
+  background-position: -655px 0;
+  width: 100px; }
+  #contact-nav:hover {
+    background-position: -655px 100%; }
+
+#pane {
+  -moz-box-shadow: 3px -3px 10px 0px #333333;
+  -webkit-box-shadow: 3px -3px 10px 0px #333333;
+  box-shadow: 3px -3px 10px 0px #333333;
+  z-index: 10; }
+  #pane header {
+    background: #00aef0;
+    overflow: hidden;
+    /* for #logo at small widths */
+    width: 100%; }
+
+#shawn {
+  display: block;
+  float: left;
+  width: 104px;
+  height: 130px;
+  background: url(/assets/images/header-shawn.png) no-repeat; }
+
+#logo {
+  display: block;
+  margin-left: 117px;
+  width: 368px;
+  height: 130px;
+  background: url(/assets/images/logo.png) no-repeat; }
+
+/*
+header { }
+
+header h1 {
+  margin: 4px 8px 0px;
+  font-size: 20px; }
+ 
+header nav li {
+  display: block;
+  float: left;
+  padding: 5px 8px; 
+}
+*/
+/* Downloads Page */
+/* keep using this div, its needed for the :first-child pseudo-class */
+.download-item {
+  min-height: 110px;
+  border-bottom: 1px dotted #ccc; }
+  .download-item h3, .download-item p {
+    margin-left: 60px; }
+  .download-item h3 {
+    margin-top: 15px; }
+  .download-item a.link {
+    display: block;
+    margin: 0 0 0 0px;
+    height: 60px;
+    width: 60px;
+    float: left;
+    background-repeat: no-repeat;
+    background-color: transparent; }
+  .download-item .cubeA.link {
+    background-image: url(/assets/images/icons/download_a_cube.png); }
+  .download-item .cubeT.link {
+    background-image: url(/assets/images/icons/download_t_cube.png); }
+  .download-item .cubeC.link {
+    background-image: url(/assets/images/icons/download_c_cube.png); }
+  .download-item .cubeG.link {
+    background-image: url(/assets/images/icons/download_g_cube.png); }
+
+/* people page bios */
+.biographies .biography {
+  margin: 0 0 20px;
+  min-height: 153px;
+  border-bottom: 1px dotted #ccc; }
+  .biographies .biography .portrait {
+    padding: 4px;
+    border: 1px solid #eee;
+    display: block;
+    width: 120px;
+    height: 120px; }
+  .biographies .biography:last-child {
+    border: 0px; }
+.biographies h4 {
+  line-height: 1.6rem; }
+
+/* align */
+div.fb-like
+{
+    top:-5px;
+    left:-10px;
+}

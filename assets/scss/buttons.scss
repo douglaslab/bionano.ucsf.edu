@@ -1,0 +1,84 @@
+/* join the lab button on front index.html page */
+#call-to-action {
+  margin: 60px auto;
+  display: block;
+  text-align: center;
+  width: 200px; }
+
+/* button classes for the site */
+.button, .button:visited, a.button, a.button:visited {
+  background: #222;
+  border: 0px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  padding: 5px 10px 6px;
+  position: relative;
+  text-decoration: none; }
+
+.button:hover, a.button:hover {
+  background-color: #111;
+  color: #fff; }
+
+.button:active {
+  top: 1px; }
+
+.small.button, .small.button:visited {
+  font-size: 11px; }
+
+.button, .button:visited, .medium.button, .medium.button:visited {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25); }
+
+.large.button, .large.button:visited {
+  font-size: 18px;
+  padding: 12px 18px 13px; }
+
+.blue.button, .blue.button:visited {
+  background-color: #00aef0; }
+
+.blue.button:hover {
+  background-color: #007d9a; }
+
+/* currently not used */
+.green.button, .green.button:visited {
+  background-color: #91bd09; }
+
+.green.button:hover {
+  background-color: #749a02; }
+
+.red.button, .red.button:visited {
+  background-color: #ff0000; }
+
+.red.button:hover {
+  background-color: #aa0510; }
+
+.magenta.button, .magenta.button:visited {
+  background-color: #a9014b; }
+
+.magenta.button:hover {
+  background-color: #630030; }
+
+.orange.button, .orange.button:visited {
+  background-color: #ffa900; }
+
+.orange.button:hover {
+  background-color: #ed9a00; }
+
+.yellow.button, .yellow.button:visited {
+  background-color: #f4d32f; }
+
+.yellow.button:hover {
+  background-color: #ffb515; }
+
+.tomato.button, .tomato.button:visited {
+  background-color: #e05845; }
+
+.tomato.button:hover {
+  background-color: #cf3823; }

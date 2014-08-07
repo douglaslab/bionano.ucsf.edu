@@ -1,0 +1,141 @@
+html {
+  font-size: 62.5%; }
+
+a, a:visited {
+  color: #00aef0;
+  text-decoration: none; }
+
+body {
+  font-family: "adelle",serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  background-color: #111111;
+  color: #333;
+  margin: 0 0 1px;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "lft-etica",sans-serif;
+
+ 
+  position: relative;
+  font-weight:600;
+  color: #222;
+  margin: 0; }
+
+h1 {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-bottom: 20px; }
+
+h2 {
+  font-size: 2.3rem;
+  line-height: 3.3rem;
+  margin-top: 0;
+  margin-bottom: 5px; }
+
+h3 {
+    font-weight:600;
+    color:#111;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 2px;
+}
+
+/* h4-h6 are all the same size, but progressively lighter greys*/
+h4, h5, h6 {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+    font-weight:600;
+
+  text-align: left;
+  margin-bottom: 2px;
+  padding-top: 3px;
+  letter-spacing: 1px; }
+
+h5 {
+  color: #888; }
+
+h6 {
+  color: #aaa; }
+#footer {
+  h6 {
+    padding:0;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height:1.9rem;
+    }
+}
+
+p {
+  margin: 0 0 18px 0; }
+
+/* standard nonsense */
+blockquote {
+  margin: 1em 3em 1em 0;
+  color: #999;
+  border-left: 2px solid #999;
+  padding-left: 1em; }
+
+pre, address {
+  position: relative;
+  top: 5px; }
+
+small {
+  font-size: 1.3rem; }
+
+abbr, code, kbd,
+samp, small, var {
+  line-height: 1.5rem; }
+
+ul, ol, dl, dialog {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  position: relative;
+  top: 5px;
+  margin-top: 18px;
+  margin-bottom: 18px; }
+
+li ul, li ol, ul ul, ol ol {
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+li h1, li h2, li h3,
+li h4, li h5, li h6,
+li p {
+  top: 0; }
+
+form, legend, label {
+  font-size: 1.3rem;
+  line-height: 1.8rem; }
+
+legend {
+  position: relative;
+  top: 5px; }
+
+table {
+  font-size: 1.3rem; }
+
+caption {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  position: relative; }
+
+hr {
+  position: relative;
+  height: 4px;
+  margin: 18px 0 14px 0; }
+
+/* pertaining to specific regions */
+#bottom {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 1px;
+  color: #888;
+}

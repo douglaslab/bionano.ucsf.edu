@@ -1,0 +1,320 @@
+
+//
+// Configuration
+//
+
+$font-size: 16px;               // Your base font-size in pixels
+//$em: $font-size / 1em;        // Shorthand for outputting ems
+// $em: 1px; // $font-size*1em; // Byron's cool Hack!
+$column: 20px;  // The column-width of your grid in pixels
+$gutter: 20px;  // The gutter-width of your grid in pixels
+
+.left{float:left;}
+.right{float:right;}
+
+
+$red:#e81d0f;
+
+//
+// Column-widths in variables, in ems
+//
+
+ $cols1: ( 1 * ($column + $gutter) - $gutter);/* 20 */
+ $cols2: ( 2 * ($column + $gutter) - $gutter);/* 60 */
+ $cols3: ( 3 * ($column + $gutter) - $gutter);/* 100 */
+ $cols4: ( 4 * ($column + $gutter) - $gutter);/* 140 */
+ $cols5: ( 5 * ($column + $gutter) - $gutter);/* 180 */
+ $cols6: ( 6 * ($column + $gutter) - $gutter);/* 220 */
+ $cols7: ( 7 * ($column + $gutter) - $gutter);/* 260 */
+ $cols8: ( 8 * ($column + $gutter) - $gutter);/* 300 */
+ $cols9: ( 9 * ($column + $gutter) - $gutter);/* 340 */
+$cols10: (10 * ($column + $gutter) - $gutter);/* 380 */
+$cols11: (11 * ($column + $gutter) - $gutter);/* 420 */
+$cols12: (12 * ($column + $gutter) - $gutter);/* 460 */
+$cols13: (13 * ($column + $gutter) - $gutter);/* 500 */
+$cols14: (14 * ($column + $gutter) - $gutter);/* 540 */
+$cols15: (15 * ($column + $gutter) - $gutter);/* 580 */
+$cols16: (16 * ($column + $gutter) - $gutter);/* 620 */
+$cols17: (17 * ($column + $gutter) - $gutter);/* 660 */
+
+//
+// Column-widths in a function, in ems
+//
+
+@mixin width ($cols:1) {width: ($cols * ($column + $gutter) - $gutter) ;}
+/* .width (@cols:1) { width: (@cols * (@column + @gutter) - @gutter) / @em;} */
+
+
+/* CLEARFIXES */
+.clearboth { clear:both; }
+.clearfix:after {    content: ".";      display: block; clear: both;    visibility: hidden;     line-height: 0; height: 0;}
+ .clearfix {    display: inline-block;}
+ html[xmlns] .clearfix {        display: block;}
+ * html .clearfix {     height: 1%;}
+
+
+/* ALL LAYOUTS */
+html, body {height: 100%;}
+
+/*Opera Fix - is this still necessary? */
+body:before { content:""; height:100%; float:left; width:0; margin-top:-32767px;}
+
+#left-background { background: url("/assets/images/01_research_left_50.png") no-repeat top left transparent ; }
+#right-background { background: url("/assets/images/artwork_research_1000.png") no-repeat top left transparent ; }
+
+.contact {
+	#left-background { background-image: url("/assets/images/05_contact_left_50.png"); }
+	#right-background { background-image: url("/assets/images/artwork_contact_1000.png"); }
+}
+.downloads {
+	#left-background { background-image: url("/assets/images/04_downloads_left_50.png"); }
+	#right-background { background-image: url("/assets/images/artwork_downloads_1000.png"); }
+}
+.people {
+	#left-background { background-image: url("/assets/images/02_people_left_50.png"); }
+	#right-background { background-image: url("/assets/images/artwork_people_1000.png"); }
+}
+.publications {
+	#left-background { background-image: url("/assets/images/03_publications_left_50.png"); }
+	#right-background { background-image: url("/assets/images/artwork_publications_1000.png"); }
+}
+.about-this-design 
+	{ /* find different artwork for here */ }
+
+#wrapper{	
+		margin:0 auto;
+	    /*min-height: 620px;*/
+	    padding-bottom: 200px; /* needed to make 100% height taller than #main with its padding */
+	    background:#252525;
+	    overflow:hidden;
+	    width:100%;
+	    max-width:1050px;
+	 	position:relative; /* so that absolutely positioned child-elments are contained */
+}
+nav {
+	padding-top:$gutter;
+    padding-bottom: 17px;
+	width: 100%;
+	ul { margin-right: $gutter; }
+	select {
+		display:none; padding:0.2em; min-width:10em;
+		option:first-child { font-weight:bold; border-bottom:solid 1px; }
+	}
+}
+
+#art { position: relative; } /* contains and constrains backgrounds and main below nav */
+
+.background { 
+	background-position: top left;
+	background-repeat: no-repeat;
+	position:absolute;
+	top:20px;
+	height:300px;
+}
+#left-background {
+	left:0;
+	width:50px;
+}
+#right-background {
+	left:550px;
+	width:500px;
+	background-size:100%;
+}
+
+#main {
+	overflow:visible;
+	margin-left:50px; /* matches width of #left-background */ 
+	width:$cols13;
+	min-height:400px;
+	#pane-content{
+		padding:20px 30px;
+	}
+}
+#pane {
+	position:relative; /* still necessary to prevent z-index of #artwork-wrapper from blocking links? */
+  	z-index:10;
+}
+#bottom {
+	clear:both;
+	padding:20px 15px 30px 20px;
+	position:static;
+	min-height:100px;
+	/*@include width(12); */
+	background:#ccc;
+} 
+
+
+#notice {}
+#footer {
+	.column {
+		float:left;
+		width:$cols3;
+		margin-right:$gutter;
+		&:last-child {
+			margin-right:0;
+		}
+	}
+	#university{
+		height:100px;
+		float:left;
+	}
+	#ucsf{ /* footer logo */
+	  	background:url(/assets/images/ucsf.png) no-repeat;
+	  	background-size: 140px 70px;
+	  	width:140px;
+	  	height:100px;
+		margin-right:1em;
+	  	display:block;
+	  	opacity:.4;
+	  	float:left;
+	  	z-index:15;
+	}
+}
+
+.biography .portrait { /* define these here so they can be overridden below for mobile widths */
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 760px) { /* nav graphics start to wrap to a second row below this width */
+	nav {
+		max-width: 600px;
+		ul { display:none; }
+		select { display:block; float:right; margin-right:50px; }
+	}
+}
+
+/* max-600px needs to appear before max-480px */
+@media (max-width: 600px) { /* content becomes full width and margins drop out */
+    #wrapper { padding-bottom: 0; }
+    nav {
+        padding-top:0;
+        padding-bottom: 10px;
+    }
+    nav select { margin-right: 5%; }
+	#main { margin:0; width:100%; }
+	#left-background { display:none; }
+	#right-background { top:130px; left:0; width:100%; }
+	#pane header {
+        -moz-box-shadow: 0 0 10px 0px #333;
+        -webkit-box-shadow: 0 0 10px 0px #333;
+        box-shadow: 0 0 10px 0px #333;
+    }
+	#pane-content { margin-top: 292px; }
+	#bottom{ /* inherits width:100% from #main */ 
+		padding-left:15px;
+		padding-right:5px;
+		#university { width:auto; }
+	}
+}
+
+@media (max-width: 480px) {
+	header { /* these need to be nested so the more specific css overrides previous properties */
+		#shawn { background-size:100%; height:65px; width:52px; }
+		#logo { /* crop and scale to 75% */
+			height: 70px;
+			margin: -8px 0 0 14%;
+			width: 276px;
+			background-size: 100%;
+		}
+	}
+	#right-background { top:65px; left:0; height:200px; }
+	#pane-content { margin-top: 192px; }
+}
+
+@media (max-width: 395px ) {
+    div.biography .portrait {
+          float: none;
+          margin: 0 0 20px 0;
+    }
+}
+
+@media (min-width: 1050px) {
+	#bottom {
+		position:absolute;
+		@include width(12);
+		background:none;
+		left:550px; 
+		top: 325px;
+		#ucsf{
+			opacity:.15;
+		}
+	}
+}
+@media (min-width: 1200px ) { /***  scaled 75%  ***/
+	#wrapper { max-width: 1325px; }
+	#main { margin-left:75px; /* matches width of #left-background */ }
+	.background { height:450px; }
+	 
+	 #left-background {
+    width: 75px;
+    background: url("/assets/images/01_research_left_75.png") no-repeat top left transparent;
+    background-size: 100%; }
+
+  .contact #left-background {
+    background-image: url("/assets/images/05_contact_left_75.png"); }
+
+  .downloads #left-background {
+    background-image: url("/assets/images/04_downloads_left_75.png"); }
+
+  .people #left-background {
+    background-image: url("/assets/images/02_people_left_75.png"); }
+
+  .publications #left-background {
+    background-image: url("/assets/images/03_publications_left_75.png"); }
+
+  #right-background {
+    margin-left: 25px;
+    width: 750px; }
+
+
+	#bottom { 
+		left:575px; 
+		top: 475px;
+		
+	}
+}
+
+/*	#bottom { @include width( 13 ); } */
+
+
+@media (min-width: 1420px) {  /***  full size (no scaling)  ***/
+	#wrapper { max-width: 1600px; }
+	#main { margin-left:100px; /* matches width of #left-background */ }
+	.background { height:600px; }
+	
+#left-background {
+    width: 100px;
+    background: url("/assets/images/01_research_left_100.png") no-repeat top left transparent;
+    background-size: 100%; }
+
+  .contact #left-background {
+    background-image: url("/assets/images/05_contact_left_100.png"); }
+
+  .downloads #left-background {
+    background-image: url("/assets/images/04_downloads_left_100.png"); }
+
+  .people #left-background {
+    background-image: url("/assets/images/02_people_left_100.png"); }
+
+  .publications #left-background {
+    background-image: url("/assets/images/03_publications_left_100.png"); }
+
+  #right-background {
+    margin-left: 50px;
+    width: 1000px; }
+
+
+	#bottom { 
+		left:600px;
+		top:635px;
+	}
+	
+}
+@media (min-width: 1420px) { /* standard large desktop 1410px */}
+
+@media (min-width: 1600px ) {  /* extra large monitor = full size artwork and content */
+	#wrapper{ max-width: 1600px; /* setting this manually because with width(), 40 => 1580 and 41 => 1620 */}
+}
+

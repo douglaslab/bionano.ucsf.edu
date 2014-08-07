@@ -1,0 +1,94 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+	<link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/images/icons/apple-touch-icon-114x114.png">
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>{{ page.title}}</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta itemprop="name" content="The Douglas Lab at University of California San Francisco">
+	<meta property="og:title" content="{{ page.title}}"/>
+	<meta property="og:type" content="Science Lab"/>
+	<<meta property="og:image" content="/assets/images/icons/fb_profile.jpg"/>
+	<meta property="og:url" content="hhttp://bionano.ucsf.edu"/>
+	<meta property="og:site_name" content="Douglas Lab, University of California San Francisco"/>
+	<meta property="og:description" content="{{ page.description}}"/>
+	<meta name="description" content="{{ page.description}}"/> 
+	<link rel="image_src" href="/assets/images/icons/fb_profile.jpg" />
+	<meta name="keywords" content="shawn douglas,douglas lab,bionanotechnology, bio nanotechnology,molecular design,cadnano,biomod" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="assets/css/bionano.css">
+	<script src="assets/js/libs/modernizr-2.5.3.min.js"></script>
+	<!--typekit-->
+	<script type="text/javascript" src="//use.typekit.net/ajy1bac.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body class="{{page.class}}">
+
+	
+<div id="wrapper">
+	
+	{% include navigation.html %}
+
+	<div id="art">
+		
+		<div id="main" role="main">	
+			<div id="pane">
+			  <header class="clearfix">
+				{% include header.html %}
+			  </header>
+			  <div id="pane-content">
+				{{ content }}
+			  </div>
+				
+			</div>
+			
+			<div id="bottom">
+				<div id="notice">
+				{% include notice.html %}
+				</div>
+				<footer id="footer" class="clearfix">
+				{% include footer.html %}
+				</footer>
+			</div>
+		</div>
+		
+		<div id="left-background" class="background"></div>
+		<div id="right-background" class="background"></div>
+	
+	</div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/script.js"></script>
+<script>
+	var _gaq=[['_setAccount','UA-34346466-1'],['_trackPageview']];
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>

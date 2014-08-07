@@ -1,0 +1,176 @@
+body {
+  background: #252525;
+  &.home {}
+}
+
+#main {
+  background: white;
+
+}
+
+nav {
+  ul {
+    float: right;
+  }
+  li {
+    float: left;
+    a {
+      display: block;
+      margin: 8px 0px 8px 26px;
+      padding: 0;
+      overflow: hidden;
+      height: 23px;
+      background-image: url("/assets/images/navigation.png");
+      background-color: transparent;
+      -webkit-transition: background 0.4s ease;
+      -moz-transition: background 0.4s ease;
+      -o-transition: background 0.4s ease;
+      transition: background 0.4s ease;
+    }
+  }
+}
+
+#research-nav {
+  background-position: 0 0;
+  width: 115px;
+  &:hover {
+    background-position: 0 100%;
+  }
+}
+
+#people-nav {
+  background-position: -155px 0;
+  width: 85px;
+  &:hover {
+    background-position: -155px 100%;
+  }
+}
+
+#publications-nav {
+  background-position: -280px 0;
+  width: 157px;
+  &:hover {
+    background-position: -280px 100%;
+  }
+}
+
+#downloads-nav {
+  background-position: -478px 0;
+  width: 137px;
+  &:hover {
+    background-position: -478px 100%;
+  }
+}
+
+#contact-nav {
+  background-position: -655px 0;
+  width: 100px;
+  &:hover {
+    background-position: -655px 100%;
+  }
+}
+
+#pane {
+     -moz-box-shadow: 3px -3px 10px 0px #333;
+  -webkit-box-shadow: 3px -3px 10px 0px #333;
+  box-shadow: 3px -3px 10px 0px #333;
+  z-index:10;
+ 
+  header {
+    background: #00aef0;
+    overflow: hidden; /* for #logo at small widths */
+    width: 100%;
+  }
+}
+
+
+#shawn {
+  display: block;
+  float: left;
+  width: 104px;
+  height: 130px;
+  background: url(/assets/images/header-shawn.png) no-repeat;
+}
+
+#logo {
+    display: block;
+  margin-left:117px;
+  width: 368px;
+  height: 130px;
+  background: url(/assets/images/logo.png) no-repeat;
+}
+
+/*
+header { }
+
+header h1 {
+  margin: 4px 8px 0px;
+  font-size: 20px; }
+ 
+header nav li {
+  display: block;
+  float: left;
+  padding: 5px 8px; 
+}
+*/
+/* Downloads Page */
+/* keep using this div, its needed for the :first-child pseudo-class */
+
+.download-item {
+  min-height: 110px;
+  border-bottom: 1px dotted #ccc;
+  h3, p {
+    margin-left: 60px;
+  }
+  h3 {
+    margin-top: 15px;
+  }
+  a.link {
+    display: block;
+    margin: 0 0 0 0px;
+    height: 60px;
+    width: 60px;
+    float: left;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  .cubeA.link {
+    background-image: url(/assets/images/icons/download_a_cube.png);
+  }
+  .cubeT.link {
+    background-image: url(/assets/images/icons/download_t_cube.png);
+  }
+  .cubeC.link {
+    background-image: url(/assets/images/icons/download_c_cube.png);
+  }
+  .cubeG.link {
+    background-image: url(/assets/images/icons/download_g_cube.png);
+  }
+}
+
+/* people page bios */
+
+.biographies {
+  .biography {
+    margin: 0 0 20px;
+    min-height: 153px;
+    border-bottom: 1px dotted #ccc;
+    .portrait {
+      padding: 4px;
+      border: 1px solid #eee;
+      display: block;
+      width: 120px;
+      height: 120px;
+    }
+    &:last-child {
+      border: 0px;
+    }
+  }
+  h4 {
+    line-height: 1.6rem;
+  }
+}
+
+
+
