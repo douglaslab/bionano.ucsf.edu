@@ -137,8 +137,11 @@ header nav li {
   line-height: 1.6rem; }
 
 /* align */
-div.fb-like
-{
-    top:-5px;
-    left:-10px;
+div.fb-like {
+  top:-7px;
+  left:-10px;
+}
+
+div.twit {
+  display: inline-block;
 }
