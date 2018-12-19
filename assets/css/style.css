@@ -136,12 +136,13 @@ header nav li {
 .biographies h4 {
   line-height: 1.6rem; }
 
-/* align */
-div.fb-like {
-  top:-7px;
-  left:-10px;
+.twit {
+  display: inline-block;
+  text-align: center;
 }
 
-div.twit {
-  display: inline-block;
+.outer {
+  display: flex;
+  align-items: center;
 }
+
