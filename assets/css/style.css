@@ -146,3 +146,6 @@ header nav li {
   align-items: center;
 }
 
+:target {
+  font-weight: bold;
+}
