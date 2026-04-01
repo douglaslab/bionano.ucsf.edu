@@ -3,7 +3,9 @@ html {
 
 a, a:visited {
   color: #006faa;
-  text-decoration: none; }
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(0, 111, 170, 0.35); }
 
 body {
   font-family: "adelle",serif;
