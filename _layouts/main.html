@@ -41,27 +41,27 @@
 	{% include navigation.html %}
 
 	<div id="art">
-		
-		<div id="main" role="main">	
+
+		<main id="main">
 			<div id="pane">
-			  <header class="clearfix">
+			  <header class="clearfix" role="banner">
 				{% include header.html %}
 			  </header>
 			  <div id="pane-content">
 				{{ content }}
 			  </div>
-				
+
 			</div>
-			
-			<div id="bottom">
+
+			<footer id="bottom" role="contentinfo">
 				<div id="notice">
 				{% include notice.html %}
 				</div>
-				<footer id="footer" class="clearfix">
+				<div id="footer" class="clearfix">
 				{% include footer.html %}
-				</footer>
-			</div>
-		</div>
+				</div>
+			</footer>
+		</main>
 		
 		<div id="left-background" class="background"></div>
 		<div id="right-background" class="background"></div>
